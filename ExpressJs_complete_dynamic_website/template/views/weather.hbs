@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="/public/css/output.css"> -->
+    {{!-- bootstrap cdn link --}}
+    
+    <title>Document</title>
+</head>
+<body>
+    {{>navbar}}
+    <div class="relative w-[80vw] h-[20vh] sm:w-[60vw] sm:h-[20vh] mx-auto pt-6 drop-shadow-md ">
+        <input id="city_name" class="w-[100%] py-4 rounded-full px-8 text-white placeholder-slate-300 text-xl bg-slate-700" placeholder="Enter city name here" type="text">
+        <p id="search" class="absolute text-white bg-blue-400 rounded-full px-6 py-4 top-[26px] right-0 hover:bg-blue-500 hover:font-semibold">Search</p>
+    </div>
+    <div id="temp_container" class="w-[80vw] h-[60vw] sm:w-[30vw] sm:h-[20vw] text-gray-400 shadow-lg py-4 px-8 bg-slate-700 mx-auto rounded-xl flex flex-col justify-between ">
+        <div class="flex justify-between">
+            <p>wed</p>
+            <p id="time">time</p>
+        </div>
+        <div class="text-xl"> <span id="city">Am</span> , <span id="country">IN</span></div>
+        <div class="flex justify-between text-[40px] font-extrabold text-center my-4">
+            <h1 class="text-white"> <span id="temp">0.00</span>  cel </h1>
+            <figure id="weatherMood"></figure>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

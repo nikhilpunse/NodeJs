@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <Style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .wrapper{  background-color: rgb(34, 44, 34);
+                    width: 100vw;
+                    height: 100vh;
+                    margin-top: 0px;
+                 }
+    </Style>
+</head>
+<body>
+    <div class="wrapper pt-16">
+        <div id="container" class="w-[60vw] h-[40vw] bg-blue-500 mx-auto  rounded flex justify-center items-center">
+            <div class="center drop-shadow-xl relative w-[40vw] h-[30vw] bg-white rounded overflow-hidden ">
+                <div class="starter text-[40px] m-4">"</div>
+                <div id="text" class="m-6 p-4 text-2xl">hello</div>
+                <div id="author" class="p-10 text-right text-xl">byxyz</div>
+                <p id="btn" class="absolute w-[100%] hover:font-bold bottom-0 p-2 text-white text-xl text-center bg-blue-600"> Next Quete</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        const text = document.getElementById('text');
+        const author = document.getElementById("author");
+        const btn = document.getElementById('btn');
+        let data = '';
+        const getNewElement = ()=>{
+            const rnum = Math.floor(Math.random() *1000);
+            text.innerHTML = data[rnum].text;
+            author.innerText = data[rnum].author==null ? 'By Unknown' : `By ${data[rnum].author}` ;
+        }
+
+        const getData = async ()=>{
+            try {
+                const res = await fetch(`https://type.fit/api/quotes`);
+                data = await res.json();
+                getNewElement();
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getData();
+
+        btn.addEventListener('click', ()=>{
+            getNewElement();
+        })
+    </script>
+</body>
+</html>

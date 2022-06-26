@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link rel="stylesheet" href="/public/css/output.css" > -->
+</head>
+<body>
+  {{>navbar}}
+  <div class="w-[100vw] sm:h-[85vh]  bg-white text-black ">
+    <section class="w-[80vw] h-[100%] mx-auto flex flex-col sm:flex-row justify-center items-center">
+      <div class="left sm:w-[50%] h-[100%] py-4 flex flex-col justify-center items-start sm:items-start ">
+        <div class="flex flex-col items-center sm:items-start py-4">
+          <p>Wlecome to the Weather App</p>
+          <h1 class="my-5 text-2xl text-center sm:text-left">Get the latest <span class="text-blue-600"> Weather </span> information <br> of your city</h1>
+          <button class="px-4 py-2 bg-slate-300 rounded-full drop-shadow-xl">Check now</button>
+        </div>
+        
+      </div>
+      <!-- right slider -->
+      <div class="right w-[50%] py-12">
+        <img src="https://thumbs.dreamstime.com/b/construction-site-silhouette-964422.jpg" alt="">
+      </div>
+    </section>
+  </div>
+  <footer class="w-[100vw] text-center text-white bg-slate-500 py-[3px]">Powered by © Punse TechSolution</footer>
+
+</body>
+</html>

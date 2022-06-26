@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link rel="stylesheet" href="/public/css/output.css" > -->
+</head>
+<body>
+  {{>navbar}}  
+  <!-- header section -->
+  <div class="w-[100vw] sm:h-[85vh]  bg-white text-black ">
+    <section class="w-[80vw] h-[100%] mx-auto flex flex-col sm:flex-row justify-center items-center">
+      <div class="left order-1 sm:w-[50%] h-[100%] py-4 flex flex-col justify-center items-start sm:items-center">
+        <div class="flex flex-col items-center sm:items-start sm:pl-16 py-4">
+          <p>Wlecome to the About Page</p>
+          <h1 class="my-5 text-2xl text-center sm:text-left">Grow your Business with <span class="text-blue-600">NP</span>-TechSolution  </h1>
+          <button class="px-4 py-2 bg-slate-300 rounded-full drop-shadow-xl">Learn more</button>
+        </div>
+      </div>
+
+      <!-- right slider -->
+      <div class="right w-[50%] py-4">
+        <img src="https://image.shutterstock.com/image-illustration/digital-generated-devices-on-desktop-260nw-1495869476.jpg" alt="">
+      </div>
+    </section>
+  </div>
+  <footer class="w-[100vw] text-center text-white bg-slate-500 py-[3px]">Powered by © Punse TechSolution</footer>
+
+</body>
+</html>
